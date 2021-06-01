@@ -3,10 +3,11 @@ import { CreateRequestAttrs } from './httpAttrs'
 import { HttpConfig } from './httpConfig'
 import { HttpEvent } from './httpEvents'
 import { buildRequest } from './httpFactory'
-import { Http, Request } from './httpTypes'
+import { Http } from './httpTypes'
 
 export class NodeHttp implements Http {
     public events: Events<HttpEvent>
+    public name = 'http' as const
     constructor(public config: HttpConfig) {
         this.events = config.events
     }

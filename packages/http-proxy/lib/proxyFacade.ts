@@ -1,9 +1,13 @@
-import { Http } from '@geislabs/http-runtime'
+import { Dependency, Http, Runtime } from '@geislabs/http-runtime'
 import { ProxyConfig } from './proxyConfig'
 
-export class ProxyPlugin<TRuntime extends { http: Http }> {
+interface Plugin<TDep extends Dependency<any, any>> {
+    register: (runtime: Runtime<TDep>) => void
+}
+
+export class ProxyPlugin implements Plugin<Http> {
     constructor(public config: ProxyConfig) {}
-    register(runtime: TRuntime) {
+    register(runtime: Runtime<Http>) {
         runtime.http.events.on('beforeRequest', (request) => {
             const target = this.config.proxy[request.url.hostname]
             if (target) {
