@@ -1,4 +1,4 @@
-import { config as createEvents } from '@geislabs/runtime-event'
+import { config as createEvents } from '@geislabs/runtime'
 import { config, HttpEvent } from '../lib'
 
 describe('event', () => {
