@@ -1,4 +1,4 @@
-import { Events } from '@geislabs/runtime-event'
+import { Events } from '@geislabs/runtime'
 import { HttpEvent } from './httpEvents'
 import { FetchFn } from './httpTypes'
 

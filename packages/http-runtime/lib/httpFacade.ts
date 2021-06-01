@@ -1,4 +1,4 @@
-import { Events } from '@geislabs/runtime-event'
+import { Events } from '@geislabs/runtime'
 import { CreateRequestAttrs } from './httpAttrs'
 import { HttpConfig } from './httpConfig'
 import { HttpEvent } from './httpEvents'

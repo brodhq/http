@@ -26,6 +26,6 @@
     },
     "dependencies": {
         "@geislabs/http-runtime": "^0.0.72",
-        "@geislabs/runtime-event": "^0.0.67"
+        "@geislabs/runtime": "^0.0.68"
     }
 }

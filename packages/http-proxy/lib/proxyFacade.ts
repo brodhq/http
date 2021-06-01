@@ -1,9 +1,6 @@
-import { Dependency, Http, Runtime } from '@geislabs/http-runtime'
+import { Plugin, Runtime } from '@geislabs/runtime'
+import { Http } from '@geislabs/http-runtime'
 import { ProxyConfig } from './proxyConfig'
-
-interface Plugin<TDep extends Dependency<any, any>> {
-    register: (runtime: Runtime<TDep>) => void
-}
 
 export class ProxyPlugin implements Plugin<Http> {
     constructor(public config: ProxyConfig) {}
