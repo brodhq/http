@@ -25,6 +25,6 @@
         "watch": "tsc --watch"
     },
     "dependencies": {
-        "@geislabs/http": "^0.0.69"
+        "@geislabs/http-runtime": "^0.0.69"
     }
 }

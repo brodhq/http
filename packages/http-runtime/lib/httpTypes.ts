@@ -14,3 +14,5 @@ export interface Http {
 export interface Request extends RequestInit {
     url: URL
 }
+
+export type { Response } from 'node-fetch'

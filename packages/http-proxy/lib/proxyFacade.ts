@@ -1,4 +1,4 @@
-import { Http } from '@geislabs/http'
+import { Http } from '@geislabs/http-runtime'
 import { ProxyConfig } from './proxyConfig'
 
 export class ProxyPlugin<TRuntime extends { http: Http }> {

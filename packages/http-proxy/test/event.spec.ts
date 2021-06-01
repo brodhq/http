@@ -1,5 +1,5 @@
 import { config as createEvents } from '@geislabs/runtime-event'
-import { config as createHttp, HttpEvent } from '@geislabs/http'
+import { config as createHttp, HttpEvent } from '@geislabs/http-runtime'
 import { config as createPlugin } from '../lib'
 
 describe('event', () => {
