@@ -1,11 +1,23 @@
 import fetch from 'node-fetch'
+import { CreateRequestAttrs } from './httpAttrs'
 import { HttpConfig } from './httpConfig'
-import { NodeHttp } from './httpFacade'
+import { buildRequest } from './httpFactory'
 import { Http } from './httpTypes'
 
-export function config({
-    fetchFn = fetch,
-    ...config
-}: Partial<HttpConfig> & Pick<HttpConfig, 'events'>): Http {
-    return new NodeHttp({ fetchFn, ...config })
-}
+export const http = ({ fetchFn = fetch }: Partial<HttpConfig> = {}): Http => ({
+    name: 'http',
+    register({ events }) {
+        return {
+            async request(attrs: CreateRequestAttrs) {
+                const request = buildRequest(attrs)
+                const { url, ...init } = request
+                events.emit('beforeRequest', request)
+                const promise = fetchFn(url.toString(), init)
+                events.emit('afterRequest', request)
+                const response = await promise
+                events.emit('afterResponse', response)
+                return response
+            },
+        }
+    },
+})

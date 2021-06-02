@@ -1,5 +1,5 @@
-import { ProxyMap } from './proxyValues'
+import { ProxyMapping } from './proxyValues'
 
 export interface ProxyConfig {
-    proxy: ProxyMap
+    mapping: ProxyMapping
 }

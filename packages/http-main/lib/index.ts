@@ -1,9 +1,8 @@
-export { config as proxy } from '@geislabs/http-proxy'
+export { proxy } from '@geislabs/http-proxy'
 export {
-    config as http,
+    http,
     Http,
     HttpEvent,
-    NodeHttp,
     Request,
     Response,
 } from '@geislabs/http-runtime'

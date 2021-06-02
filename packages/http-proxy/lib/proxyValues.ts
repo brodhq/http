@@ -1,3 +1,3 @@
-export interface ProxyMap {
-    [source: string]: string
+export interface ProxyMapping {
+    [key: string]: string
 }
