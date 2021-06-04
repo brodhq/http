@@ -1,7 +1,7 @@
 {
     "private": false,
     "name": "@geislabs/http-proxy",
-    "version": "0.0.77",
+    "version": "0.0.78",
     "description": "> TODO: description",
     "author": "mads hargreave <mads.hargreave@gmail.com>",
     "homepage": "",
@@ -25,7 +25,7 @@
         "watch": "tsc --watch"
     },
     "dependencies": {
-        "@geislabs/http-plugin": "^0.0.77",
+        "@geislabs/http-plugin": "^0.0.78",
         "@geislabs/plugin": "^0.0.2",
         "@geislabs/runtime": "^0.0.72"
     }
