@@ -1,5 +1,5 @@
-import { config as createRuntime } from '@geislabs/runtime'
-import { http } from '@geislabs/http-runtime'
+import { config as createRuntime } from '@geislabs/plugin'
+import { plugin as http } from '@geislabs/http-plugin'
 import { proxy } from '../lib'
 
 describe('plugin', () => {
@@ -7,12 +7,14 @@ describe('plugin', () => {
         const fetchFn = jest.fn() as any
         const runtime = createRuntime({
             plugins: [
-                http({
-                    fetchFn,
-                }),
-                proxy({
-                    mapping: { 'google.com': 'localhost:4000' },
-                }),
+                {
+                    plugin: http,
+                    options: { fetchFn },
+                },
+                {
+                    plugin: proxy,
+                    options: { mapping: { 'google.com': 'localhost:4000' } },
+                },
             ],
         })
         const context = await runtime.load()
@@ -24,12 +26,14 @@ describe('plugin', () => {
         const fetchFn = jest.fn() as any
         const runtime = createRuntime({
             plugins: [
-                http({
-                    fetchFn,
-                }),
-                proxy({
-                    mapping: { 'google.com': 'localhost:4000' },
-                }),
+                {
+                    plugin: http,
+                    options: { fetchFn },
+                },
+                {
+                    plugin: proxy,
+                    options: { mapping: { 'google.com': 'localhost:4000' } },
+                },
             ],
         })
         const context = await runtime.load()

@@ -1,6 +1,6 @@
 {
     "private": false,
-    "name": "@geislabs/http-runtime",
+    "name": "@geislabs/http-plugin",
     "version": "0.0.77",
     "description": "> TODO: description",
     "author": "mads hargreave <mads.hargreave@gmail.com>",
@@ -25,6 +25,7 @@
         "watch": "tsc --watch"
     },
     "dependencies": {
-        "@geislabs/runtime": "^0.0.72"
+        "@geislabs/plugin": "^0.0.2",
+        "@geislabs/runtime-event": "^0.0.79"
     }
 }

@@ -1,2 +1,5 @@
 export * from './proxyConfig'
 export * from './proxyProvider'
+export * from './proxyTypes'
+export * from './proxyValues'
+export * from './proxyEvents'

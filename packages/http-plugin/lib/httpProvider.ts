@@ -1,12 +1,11 @@
-import fetch from 'node-fetch'
+import nodefetch from 'node-fetch'
 import { CreateRequestAttrs } from './httpAttrs'
-import { HttpConfig } from './httpConfig'
 import { buildRequest } from './httpFactory'
-import { Http } from './httpTypes'
+import { HttpPlugin } from './httpTypes'
 
-export const http = ({ fetchFn = fetch }: Partial<HttpConfig> = {}): Http => ({
+export const plugin: HttpPlugin = {
     name: 'http',
-    register({ events }) {
+    register({ events }, { fetchFn = nodefetch }) {
         return {
             async request(attrs: CreateRequestAttrs) {
                 const request = buildRequest(attrs)
@@ -20,4 +19,4 @@ export const http = ({ fetchFn = fetch }: Partial<HttpConfig> = {}): Http => ({
             },
         }
     },
-})
+}

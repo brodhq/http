@@ -1,5 +1,7 @@
-import { Http } from '@geislabs/http-runtime'
-import { Plugin } from '@geislabs/runtime'
+import { HttpPlugin } from '@geislabs/http-plugin'
+import { Plugin } from '@geislabs/plugin'
+import { ProxyConfig } from './proxyConfig'
 import { ProxyEvent } from './proxyEvents'
 
-export interface ProxyPlugin extends Plugin<'proxy', any, Http, ProxyEvent> {}
+export interface ProxyPlugin
+    extends Plugin<'proxy', ProxyConfig, any, HttpPlugin, ProxyEvent> {}

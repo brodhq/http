@@ -1,4 +1,4 @@
-import type { Event } from '@geislabs/runtime'
+import type { Event } from '@geislabs/runtime-event'
 import type { Response } from 'node-fetch'
 import type { Request } from './httpTypes'
 

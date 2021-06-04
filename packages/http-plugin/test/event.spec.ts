@@ -1,10 +1,17 @@
-import { config as createRuntime } from '@geislabs/runtime'
-import { http } from '../lib'
+import { PluginObject, config as createRuntime } from '@geislabs/plugin'
+import { plugin } from '../lib'
 
 describe('event', () => {
     test('before request', async () => {
         const mock = jest.fn() as any
-        const runtime = createRuntime({ plugins: [http({ fetchFn: mock })] })
+        const runtime = createRuntime({
+            plugins: [
+                <PluginObject<typeof plugin>>{
+                    plugin,
+                    options: { fetchFn: mock },
+                },
+            ],
+        })
         const context = await runtime.load()
         context.http.events.on('beforeRequest', (request) => {
             request.url.hostname = 'localhost'

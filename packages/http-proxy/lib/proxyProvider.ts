@@ -1,5 +1,4 @@
-import { http } from '@geislabs/http-runtime'
-import { ProxyConfig } from './proxyConfig'
+import { plugin as http } from '@geislabs/http-plugin'
 import { ProxyPlugin } from './proxyTypes'
 
 /**
@@ -7,13 +6,10 @@ import { ProxyPlugin } from './proxyTypes'
  * @param config
  * @returns
  */
-export const proxy = ({
-    mapping = {},
-    ...config
-}: ProxyConfig): ProxyPlugin => ({
+export const proxy: ProxyPlugin = {
     name: 'proxy',
-    depends: [http()],
-    register({ http, events }) {
+    depends: [http],
+    register({ http, events }, { mapping = {} }) {
         http.events.on('beforeRequest', (request) => {
             const target = mapping[request.url.hostname]
             if (target) {
@@ -24,4 +20,4 @@ export const proxy = ({
             }
         })
     },
-})
+}

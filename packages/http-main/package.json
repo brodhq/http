@@ -26,6 +26,6 @@
     },
     "dependencies": {
         "@geislabs/http-proxy": "^0.0.77",
-        "@geislabs/http-runtime": "^0.0.77"
+        "@geislabs/http-plugin": "^0.0.77"
     }
 }
