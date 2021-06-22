@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://pansar.io">
-    <img alt="pansar" src="https://raw.githubusercontent.com/pansarhq/assets/master/icons/png/icon-header-repository.png" height="64" width='auto'>
+  <a href="https://brod.sh">
+    <img alt="brod" src="https://raw.githubusercontent.com/brodhq/assets/master/icons/png/icon-header-repository.png" height="64" width='auto'>
   </a>
 </p>
 
@@ -9,20 +9,20 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/@pansar/http">
-    <img alt="Hex Version" src="https://img.shields.io/npm/v/@pansarhq/http.svg">
+  <a href="https://www.npmjs.com/package/@brod/http">
+    <img alt="Hex Version" src="https://img.shields.io/npm/v/@brodhq/http.svg">
   </a>
-  <a href="https://github.com/pansarhq/http/actions">
-    <img alt="CI Status" src="https://github.com/pansarhq/http/workflows/ci/badge.svg">
+  <a href="https://github.com/brodhq/http/actions">
+    <img alt="CI Status" src="https://github.com/brodhq/http/workflows/ci/badge.svg">
   </a>
   <a href="https://opensource.org/licenses/Apache-2.0">
-    <img alt="Apache 2 License" src="https://img.shields.io/npm/l/pansar">
+    <img alt="Apache 2 License" src="https://img.shields.io/npm/l/brod">
   </a>
-  <a href="https://codecov.io/gh/pansarhq/http">
-    <img src="https://codecov.io/gh/pansarhq/http/branch/master/graph/badge.svg?token=CYpB9H2ah3"/>
+  <a href="https://codecov.io/gh/brodhq/http">
+    <img src="https://codecov.io/gh/brodhq/http/branch/master/graph/badge.svg?token=CYpB9H2ah3"/>
   </a>
 </p>
 
-**@pansarhq/http** is part of the **pansar** ecosystem and was designed to work seamlessly with the [pansar](https://pansar.io) and its other components (but works great on its own or with other frameworks).
+**@brodhq/http** is part of the **brod** ecosystem and was designed to work seamlessly with the [brod](https://brod.sh) and its other components (but works great on its own or with other frameworks).
 
-### Visit the [pansar.io](https://pansar.io) developer Portal for tutorials, documentation, and support
+### Visit the [brod.sh](https://brod.sh) developer Portal for tutorials, documentation, and support
